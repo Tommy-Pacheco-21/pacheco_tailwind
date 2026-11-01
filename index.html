@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tommy Pacheco — Tailwind CSS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap">
+
+         <script src="https://cdn.tailwindcss.com"></script> <!-- Enables use of Tailwind CSS -->
+
+</head>
+
+<header><nav class="bg-white/60"> <!-- gives the background a slight transparent effect -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">  <!-- has different padding values for medium and large screens -->
+    <div class="flex items-center justify-between h-16"> <!-- website name are placed to the left, while nav links are placed to the right -->
+      <div class="font-bold text-xl text-blue-700 hover:text-purple-900 transition-colors"> <!-- website name changes color when hovered on, and takes the user back to the home page -->
+       <a href="#" focus-visible:outline> Tailwind CSS</a> 
+    </div>
+
+      <!-- Desktop Links (hidden on mobile) -->
+      <div class="hidden md:flex space-x-4"> <!-- space-x-num creates spacing for the individual nav links -->
+        <a href="#" class="block px-3 py-2 rounded-md text-gray-600 hover:text-blue-300 hover:bg-gray-600 font-medium transition-colors focus-visible:outline">Features</a> <!-- px and py adds padding to the background, rounded-md makes the background rounded, text color changes when hovered on -->
+        <a href="#" class="block px-3 py-2 rounded-md text-gray-600 hover:text-blue-300 hover:bg-gray-600 font-medium transition-colors focus-visible:outline">About</a>
+        <a href="#" class="block px-3 py-2 rounded-md text-gray-600 hover:text-blue-300 hover:bg-gray-600 font-medium transition-colors focus-visible:outline">Pricing</a>
+        <a href="#" class="block px-3 py-2 rounded-md text-gray-600 hover:text-blue-300 hover:bg-gray-600 font-medium transition-colors focus-visible:outline">Contact</a>
+      </div>
+
+      <!-- Hamburger Button (hidden on desktop) -->
+      <div class="md:hidden"> <!-- hides the hamburger menu on medium to large screens -->
+        <button id="mobile-menu-button" class="p-2 rounded-md hover:bg-purple-900 focus:outline-none"> <!-- creates a clickable button whose background turns purple when hovering-->
+          <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <!-- AI assisted, adjusts height with h, width with w, and size with viewBox. used for the three hamburger lines -->
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /> <!-- AI generated asset, used to create the three lines for the hamburger -->
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Linka (hidden on desktop) -->
+  <div id="mobile-menu" class="hidden md:hidden px-2 pt-2 pb-3 space-y-2"> <!-- creates some padding for the nav links, which are displayed in a vertical column -->
+    <a href="#" class="block px-3 py-2 rounded-md text-gray-600 hover:text-blue-300 hover:bg-gray-600 font-medium transition-colors focus-visible:outline">Features</a> <!-- px and py adds padding to the background, rounded-md makes the background rounded, text color changes when hovered on -->
+    <a href="#" class="block px-3 py-2 rounded-md text-gray-600 hover:text-blue-300 hover:bg-gray-600 font-medium transition-colors focus-visible:outline">About</a>
+    <a href="#" class="block px-3 py-2 rounded-md text-gray-600 hover:text-blue-300 hover:bg-gray-600 font-medium transition-colors focus-visible:outline">Pricing</a>
+    <a href="#" class="block px-3 py-2 rounded-md text-gray-600 hover:text-blue-300 hover:bg-gray-600 font-medium transition-colors focus-visible:outline">Contact</a>
+  </div>
+</nav>
+
+
+
+
+</nav></header>
+
+<body class="bg-gradient-to-r from-cyan-800 to-blue-900"> <!-- Applies a background gradient from cyan to blue -->
+
+<section class="px-6 py-16 text-center md:py-24"> <!-- px = horizontal padding, py = vertical padding, py-24 only applies to medium and large screens, all text is centered-->
+  <h1 class="text-3xl font-bold  text-blue-200 md:text-5xl"> <!-- text-numxl sets the size of text, font-bold sets text to bold, text-slate-num adjusts color shading -->
+    Build it once. Reuse it everywhere.
+  </h1>
+  <p class="mx-auto mt-6 max-w-xl text-slate-200"> <!-- mx-auto centers text, mt-num adds padding -->
+    A reusable component set built with Tailwind CSS.
+  </p>
+  <div class="mt-8 flex justify-center gap-4"> <!-- uses flex, complete with justify-center to align content and gap for padding -->
+    <a href="#features"
+       class=" border border-gray-100 rounded-md bg-blue-600 border-slate-400 px-8 py-3 text-white font-semibold 
+              hover:bg-purple-900 focus-visible:outline
+              focus-visible:outline-2 focus-visible:outline-offset-2  hover:scale-105 transition-transform duration-100 motion-reduce:transition-none"> <!-- border adds a gray border around the button, rounded numxl adds rounded corners, bg turns purple when the mouse is hovered over the button, button also visibly grows larger when hovered on -->
+      Get started
+    </a>
+  </div>
+</section>
+
+
+<section id="features" class="px-6 py-12"> <!-- sets vertical and horizontal padding -->
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"> <!-- sets the amount of columns to one on small screens, two for medium screens, and three for large screens -->
+    <article class="rounded-md border border-slate-200 p-8"> <!-- sets rounded borders, border color, and padding -->
+      <h3 class="text-lg font-semibold text-slate-200">Reusable</h3> <!-- text in the grid header is semi-bolded -->
+      <p class="mt-2 text-slate-300">Drop this card into any future page.</p>
+    </article>
+    <article class="rounded-md border border-slate-400 p-8">
+      <h3 class="text-lg font-semibold text-slate-200">grid-cols-1</h3>
+      <p class="mt-2 text-slate-300">One column of cards for small screens.</p>
+    </article>
+    <article class="rounded-md border border-slate-200 p-8">
+      <h3 class="text-lg font-semibold text-slate-200">grid-cols-2</h3>
+      <p class="mt-2 text-slate-300">Two columns of cards for medium screens.</p>
+    </article>
+    <article class="rounded-md border border-slate-400 p-8">
+      <h3 class="text-lg font-semibold text-slate-200">grid-cols-3</h3>
+      <p class="mt-2 text-slate-300">Three columns of cards for large screens.</p>
+    </article>
+    <article class="rounded-md border border-slate-200 p-8">
+      <h3 class="text-lg font-semibold text-slate-200">gap</h3>
+      <p class="mt-2 text-slate-300">Creates space between cards.</p>
+    </article>
+    <article class="rounded-md border border-slate-400 p-8">
+      <h3 class="text-lg font-semibold text-slate-200">Use Cases</h3>
+      <p class="mt-2 text-slate-300">Pricing, portfolio, skill set, services.</p>
+    </article>
+  </div>
+</section>
+
+
+
+
+<footer class="bg-white/60 text-white pt-6 pb-8"> <!-- top + bottom padding -->
+   <div class="max-w-4xl mx-auto px-6 py-4 "> <!-- vertical + horizontal padding -->
+     <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-10 "> <!-- nav links are placed below website name on small screens -->
+       <div class="col-span-4"> <a href="#" class="font-bold text-xl text-blue-700 hover:text-purple-900 transition-colors focus-visible:outline">Tailwind CSS</a> 
+      </div>
+       <div>
+        <h4 class="px-2 py-2 text-xs font-bold uppercase text-gray-500 mb-4">Navigation</h4> <!-- a "navigation" text is placed above the nav links, and is displayed in uppercase by default -->
+        <ul class="space-y-4 ">
+            <li><a href="#" class="px-2 py-2 rounded-md  text-gray-600 hover:text-blue-300 hover:bg-gray-600 font-medium transition-colors focus-visible:outline">Features</a></li> <!-- px and py adds padding to the background, rounded-md makes the background rounded, text color changes when hovered on -->
+            <li><a href="#" class="px-2 py-2 rounded-md  text-gray-600 hover:text-blue-300 hover:bg-gray-600 font-medium transition-colors focus-visible:outline">About</a></li>
+            <li><a href="#" class="px-2 py-2 rounded-md  text-gray-600 hover:text-blue-300 hover:bg-gray-600 font-medium transition-colors focus-visible:outline">Pricing</a></li>
+            <li><a href="#" class="px-2 py-2 rounded-md  text-gray-600 hover:text-blue-300 hover:bg-gray-600 font-medium transition-colors focus-visible:outline">Contact</a></li>
+           </ul> </div> 
+          </div> 
+          <div class="border-t border-gray-800 pt-8"> <!-- creates a gray bar between the nav links and the copyright text --> 
+             <p class="text-gray-500 text-sm ">&copy; 2026 Thomas Pacheco - Made with Tailwind</p>
+             </div>
+             </div> 
+            </footer>
+
+ <!-- for the hamburger menu -->
+<script>  
+  const btn = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+
+</body>
+</html>
